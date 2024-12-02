@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen King Library</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="barra-fixa">
+        <div class="nav">
+            <input type="text" id="search" placeholder="Search for a book..." oninput="searchBooks()">
+            <div class="icons">
+                <a href="../pages/home.html" target="_blank" id="buttons">
+                    <i class="fa-solid fa-house" style="color: #511f1f;"></i>
+                </a>
+                <a href="../pages/favorite.html" target="_blank" id="buttons">
+                    <i class="fa-regular fa-star" style="color: #511f1f;"></i>
+                </a>
+                <a href="../pages/login.html" target="_blank" id="buttons">
+                    <i class="fa-regular fa-user" style="color: #511f1f;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="container">
+        <section id="card-container" class="card-grid">
+            <!-- Os cards serão gerados dinamicamente -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
