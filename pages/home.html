@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen King Library</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <header class="barra-fixa">
-        <div class="nav">
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="../images/logo.png" alt="Logo Stephen King" class="logo">                
+        </div>
+        <div class="nav-center">
             <input type="text" id="search" placeholder="Search for a book..." oninput="searchBooks()">
-            <div class="icons">
-                <a href="../pages/home.html" target="_blank" id="buttons">
-                    <i class="fa-solid fa-house" style="color: #511f1f;"></i>
-                </a>
-                <a href="../pages/favorite.html" target="_blank" id="buttons">
-                    <i class="fa-regular fa-star" style="color: #511f1f;"></i>
-                </a>
-                <a href="../pages/login.html" target="_blank" id="buttons">
-                    <i class="fa-regular fa-user" style="color: #511f1f;"></i>
-                </a>
-            </div>
+        </div>
+        <div class="nav-right">
+            <a href="../pages/home.html" id="icon-buttons">
+                <i class="fa-solid fa-house" style="color: black;"></i>
+            </a>
+            <a href="../pages/favorite.html" id="icon-buttons">
+                <i class="fa-solid fa-star" style="color: black;"></i>
+            </a>
+            <a href="../pages/login.html" id="icon-buttons">
+                <i class="fa-solid fa-user" style="color: black;"></i>
+            </a>
         </div>
     </header>
 
+    <h2>Stephen King Library</h2>
+
     <main id="container">
-        <section id="card-container" class="card-grid">
+        <section id="books-container">
             <!-- Os cards serão gerados dinamicamente -->
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/login.js"></script> 
+    <script src="../javascript/favorites.js"></script>
 </body>
 </html>
