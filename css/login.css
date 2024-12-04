@@ -1,3 +1,96 @@
-.login{
-    margin-top: 100px;
+:root{
+    --success-color: rgb(0, 177, 0);
+    --error-color: red;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.formulario{
+    background-color: rgb(126, 126, 126);
+    border-radius: 12px;
+    box-shadow: 0px 4px 13px 4px rgb(187, 187, 187);
+    width: 550px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+#form{
+    margin: 20px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.form-control label{
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-control input{
+    display: block;
+    width: 98%;
+    padding: 10px 0 10px;
+    border-radius: 8px;
+    border: 2px solid aliceblue;
+    background-color: rgba(240, 248, 255, 0.753);
+    color: rgb(128,0,0);
+    padding-left: 8px;
+}
+
+.form-control input::placeholder{
+    color: rgba(128,0,0);
+}
+
+.form-control input:focus{
+    outline: 0;
+    border-color: aliceblue;
+}
+
+.form-control.success input{
+    border-color: var(--success-color);
+}
+
+.form-control.error input{
+    border-color: var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+    font-size: 13px;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+#form button{
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 2px solid aliceblue;
+    background-color: aliceblue;
+    color: rgb(190,0,0);
+    font-weight: bold;
+}
+
+#form button:hover{
+    background-color: rgba(190,0,0);
+    color: aliceblue;
 }
