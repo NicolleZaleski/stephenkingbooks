@@ -1,0 +1,43 @@
+main {
+    padding: 2rem;
+}
+
+#favorites-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.favorite-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    width: 200px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.favorite-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-details {
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e03d00;
+}

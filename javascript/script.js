@@ -7,7 +7,7 @@ async function fetchBooks(query = "") {
     try {
         const response = await fetch("https://stephen-king-api.onrender.com/api/books");
         if (!response.ok) {
-            throw new Error(`Erro na API: ${response.status}`);
+            throw new Error(`API error: ${response.status}`);
         }
 
         const result = await response.json();
@@ -22,10 +22,10 @@ async function fetchBooks(query = "") {
             }
             renderCards (books);
         } else {
-            throw new Error('A propriedade "data" não é um array!')
+            throw new Error('The "data" property is not an array!')
         }
     } catch (error) {
-        console.log('Erro ao buscar os livros:',error.message);
+        console.log('Error when searching for books:',error.message);
     }
 }
 
@@ -125,9 +125,9 @@ function renderCards(books) {
 
 // Função para adicionar um livro aos favoritos
 function addToFavorites(id, title) {
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem("isLoggedIn");
     if (!user) {
-        alert("Você precisa fazer login para adicionar aos favoritos!");
+        alert("You need to log in to add to favorites!");
         return;
     }
 
@@ -135,9 +135,9 @@ function addToFavorites(id, title) {
     if (!favorites.some(book => book.id === id)) {
         favorites.push({ id, title });
         localStorage.setItem("favorites", JSON.stringify(favorites));
-        alert("Livro adicionado aos favoritos!");
+        alert("Book added to favorites!");
     } else {
-        alert("Livro já está nos favoritos.");
+        alert("Book is already in favorites.");
     }
 }
 
