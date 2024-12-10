@@ -217,4 +217,3 @@ function searchBooks() {
 
 // Inicializar a página com livros aleatórios
 fetchBooks();
-
