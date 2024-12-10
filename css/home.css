@@ -21,9 +21,8 @@ body{
 #books-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 1.5rem;
     justify-content: center;
-    /* padding: 20px; */
 }
 
 .card {
@@ -75,13 +74,13 @@ body{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(173, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: bolder;
 }
 
 .card-details p {
-    margin: 8px 0;
-    font-size: 18px;
+    margin: 3px 0;
+    font-size: 16px;
     opacity: 0.8;
     background-color: transparent;
     color:rgb(173, 0, 0);
@@ -89,8 +88,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.card-details .desc {
+    text-align: justify;
+    padding: 0 9px;
+}
+
 .card-details button {
-    margin-top: 20px;
+    margin-top: 10px;
     background: rgb(128, 0, 0);
     color: rgb(255, 255, 255);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -110,21 +114,71 @@ body{
 @media (max-width: 700px){
     h2{
         font-size: 30px;
-        margin-top: 70px;
+        margin-top: 90px;
     }
-}
-
-@media (max-width: 450px){
+    #container{
+        margin-top: 30px;
+    }
+    #books-container{
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        gap: 20px;
+    }
+    .card{
+        width: 250px;
+        height: 350px;
+    }
+    .card-details h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .card-details p {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    .card-details button{
+        margin-top: 5px;
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+    .card-details .desc {
+        text-align: justify;
+        padding: 0 6px;
+    }
     
 }
 
-/* h2{
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-    margin-top: 150px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(160, 0, 0);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-} */
+@media (max-width: 450px){
+    h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    #container{
+        margin-top: 10px;
+    }
+    #books-container{
+        grid-template-columns: repeat(auto-fill, minmax(140px,1fr));
+        gap: 20px;
+    }
+    .card{
+        width: 130px;
+        height: 230px;
+    }
+    .card-details h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .card-details p {
+        font-size: 9px;
+        margin: 0px;
+    }
+    .card-details button{
+        margin-top: 3px;
+        font-size: 9px;
+        padding: 5px 10px;
+    }
+    .card-details .desc {
+        text-align: justify;
+        padding: 0 3px;
+    }
+    
+}

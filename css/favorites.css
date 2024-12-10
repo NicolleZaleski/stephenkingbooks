@@ -1,5 +1,12 @@
 main {
     padding: 2rem;
+    margin-top: 120px;
+}
+
+main h1{
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #favorites-container {
@@ -9,35 +16,107 @@ main {
     justify-content: center;
 }
 
+#favorites-container p{
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .favorite-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background: white;
-    width: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.781);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    background: rgb(128,0,0);
+    width: 270px;
     text-align: center;
     padding: 1rem;
 }
 
 .favorite-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 250px;
+    height: 400px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.781);
 }
 
 .card-details {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card-details h3{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 6px;
+    font-size: 20px;
+
 }
 
 button {
-    background-color: #ff4500;
+    background-color: #000000;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 9px 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #e03d00;
+    background-color: white;
+    color: #000000;
+    font-weight: bolder;
+}
+
+@media (max-width: 700px) {
+    main{
+        margin-top: 80px;
+    }
+    main h1 {
+    margin-bottom: 25px;
+    font-size: 25px;
+    }
+    #favorites-container p{
+        font-size: 18px;
+    }
+    .favorite-card{
+        width: 220px;
+    }
+    .favorite-card img{
+        width: 218px;
+        height: 320px;
+    }
+    .card-details h3{
+        font-size: 16px;
+    }
+    button{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    main{
+        margin-top: 40px;
+    }
+    main h1{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    #favorites-container p{
+        font-size: 12px;
+    }
+    .favorite-card {
+        width: 150px;
+    }
+    .favorite-card img{
+        width: 135px;
+        height: 220px;
+    }
+    .card-details h3{
+        font-size: 13px;
+    }
+    button{
+        font-size: 9px;
+    }
 }
